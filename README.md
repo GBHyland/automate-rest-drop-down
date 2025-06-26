@@ -12,6 +12,7 @@ This step assumes you already have a User Taskwith a referenced form that contai
 
 
 ### JSON States:
+The url above will return this JSON string of the 50 states:
 ```
     {
         "states": [
