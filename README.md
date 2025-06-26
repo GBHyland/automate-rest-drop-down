@@ -1,18 +1,10 @@
 # Automate REST Drop-down
 Adding a rest call to a drop-down field in Automate:
 
-### Set up a mock for your REST API call:
-1. Navigate to [Mocky.io](https://designer.mocky.io/design).
-   - Create a new Mock.
-   - In the **HTTP Request Body** field, paste the JSON response you want back to your drop-down field. (For states, copy the JSON at the bottom of this page, or use your own).
-   - **If providing your own JSON structure:**
-     - The JSON needs a named array where each array element must contain key-value pairs. One will be the LABEL and the other the ID for each drop-down option. (See the JSON at the bottom as example of the structure).
-   - Press the **GENERATE HTTP RESPONSE** button and copy the provided URL on the next page.
-
 ### Add the mock API to your existing drop-down in Automate:
 This step assumes you already have a User Taskwith a referenced form that contains a drop-down field. Open the form and select the _Advanced Tab_ of the drop-down element. Enter the following configuration:
 1. **Data Source:** ```REST Service```
-2. **REST URL:** _paste the link received from mocky.io_
+2. **REST URL:** ```http://cic-webapps.alfdemo.com/rest-states/```
 3. **Path to array in JSON reposnse:** _the name you used for the array in your JSON. If using the states JSON, enter ```states```._
 4. **ID Property:** _the name of each ID element in your JSON. If using the states JSON, enter ```abbreviation```._
 5. **Label Property:** _the name of each Label element in your JSON. If using the states JSON, enter ```name```._
