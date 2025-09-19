@@ -4,11 +4,17 @@ Adding a rest call to a drop-down field in Automate:
 ### Add the mock API to your existing drop-down in Automate:
 This step assumes you already have a User Taskwith a referenced form that contains a drop-down field. Open the form and select the _Advanced Tab_ of the drop-down element. Enter the following configuration:
 1. **Data Source:** ```REST Service```
-2. **REST URL:** ```http://cic-webapps.alfdemo.com/rest-states/```
-3. **Path to array in JSON reposnse:** _the name you used for the array in your JSON. If using the states JSON, enter ```states```._
-4. **ID Property:** _the name of each ID element in your JSON. If using the states JSON, enter ```abbreviation```._
-5. **Label Property:** _the name of each Label element in your JSON. If using the states JSON, enter ```name```._
-6. **OPTIONAL:** Press the blue **TEST** button, then press test on the popup window and you should see the JSON response you entered in mocky.io returned.
+2. **REST URL:**
+   - **WARNING:** Automate will not allow a rest call to a URL that is not secured (https), so if for Automate you'll have to use a mock link. If this is you, follow these steps to get a URL:
+     1. Go to: https://mocki.io/
+     2. Copy the states JSON code from below.
+     3. Paste the code into the multi-line text field on the mock page just below the **Free API Editor** header and press the **Create API** button.
+     4. Your URL is provided.
+   - If you're using Alfresco you can use this URL: ```http://cic-webapps.alfdemo.com/rest-states/```
+4. **Path to array in JSON reposnse:** _the name you used for the array in your JSON. If using the states JSON, enter ```states```._
+5. **ID Property:** _the name of each ID element in your JSON. If using the states JSON, enter ```abbreviation```._
+6. **Label Property:** _the name of each Label element in your JSON. If using the states JSON, enter ```name```._
+7. **OPTIONAL:** Press the blue **TEST** button, then press test on the popup window and you should see the JSON response you entered in mocky.io returned.
 
 
 ### JSON States:
